@@ -1,0 +1,19 @@
+name: Hello Actions
+
+on:
+  push:
+    branches: [testing]
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Say hello
+        run: echo "Hello, GitHub Actions!"
+
+      - name: List files
+        run: ls -la

@@ -1,4 +1,3 @@
-yaml
 name: Hello Actions
 
 on:
@@ -10,11 +9,11 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - name: 저장소 가져오기
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: 인사하기
+      - name: Say hello
         run: echo "Hello, GitHub Actions!"
 
-      - name: 파일 목록 보기
+      - name: List files
         run: ls -la
